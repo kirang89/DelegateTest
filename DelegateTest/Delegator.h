@@ -2,12 +2,13 @@
 //  Delegator.h
 //  DelegateTest
 //
-//  Created by WalletKit Inc on 6/13/13.
+//  Created by Kiran on 6/13/13.
 //  Copyright (c) 2013 kiran. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
+//The Delegator
 @interface Delegator : NSObject
 
 @property (weak) id delegate;
@@ -15,6 +16,7 @@
 
 @end
 
+//Formal protocol for the delegate
 @protocol DelegatorDelegatingProtocol
 
 - (NSString *) someRandomOperation;

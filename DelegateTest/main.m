@@ -2,7 +2,7 @@
 //  main.m
 //  DelegateTest
 //
-//  Created by WalletKit Inc on 6/13/13.
+//  Created by Kiran on 6/13/13.
 //  Copyright (c) 2013 kiran. All rights reserved.
 //
 
@@ -18,9 +18,11 @@ int main(int argc, const char * argv[])
         Delegator *delegatorInstance = [Delegator new];
         NSLog(@"%@", [delegatorInstance operation]);
         
+        //Using delegate that does not conform to protocol
         delegatorInstance.delegate = @"Some random string";
         NSLog(@"%@", [delegatorInstance operation]);
         
+        //Using delegate that conforms to protocol
         Delegate *delegateInstance = [Delegate new];
         delegatorInstance.delegate = delegateInstance;
         NSLog(@"%@", [delegatorInstance operation]);
